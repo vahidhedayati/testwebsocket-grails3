@@ -1,0 +1,38 @@
+# Grails
+logs/
+prodDb.h2.db
+prodDb.lock.db
+# Gradle
+build/
+.gradle/
+.gradletasknamecache
+# Eclipse
+.project
+.metadata
+bin/**
+.classpath
+.settings/
+# IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+# target
+target/
+.DS_Store
+/*.log
+/*.sha1
+/*.zip
+/.classpath
+/.project
+/.settings
+/cobertura.ser
+stacktrace.log
+*Db.properties
+*Db.script
+/plugin.xml
+/*DB.*
+/.gradle
+/.idea
+/.link_to_grails_plugins
+/build

@@ -22,7 +22,7 @@ http://localhost:8080/test/index  -->  this is using spring boot WebSocketConfig
 
 How it is working:
 
-grails-app/init/Application.groovy
+[grails-app/init/Application.groovy](https://github.com/vahidhedayati/testwebsocket-grails3/blob/master/grails-app/init/testsocket/Application.groovy)
 
 So we have declated /echo to use the new websocket configurator and the ServletListenerRegistrationBean registers the listener for the traditional websockets method
 
@@ -73,7 +73,7 @@ class Application extends GrailsAutoConfiguration implements  WebSocketConfigure
 
 
 
-AnotherWebSocketHandler.groovy this is our traditional calling method to use default websockets via a spring boot Grails application
+[AnotherWebSocketHandler.groovy](https://github.com/vahidhedayati/testwebsocket-grails3/blob/master/src/main/groovy/testsocket/AnotherWebSocketHandler.groovy) this is our traditional calling method to use default websockets via a spring boot Grails application
 
 ```groovy
 package testsocket
@@ -134,7 +134,7 @@ public class AnotherWebSocketHandler implements ServletContextListener {
 }
 ```
 
-The calling page to above endpoint is index2.gsp:
+The calling page to above endpoint is [index2.gsp](https://github.com/vahidhedayati/testwebsocket-grails3/blob/master/grails-app/views/test/index2.gsp):
 
 ```gsp
 <html>
@@ -166,7 +166,7 @@ socket.onerror = function() {
 -------------------------------------------------------
 
 
-AWebSocketHandler Is the new spring boot method
+[AWebSocketHandler.groovy](https://github.com/vahidhedayati/testwebsocket-grails3/blob/master/src/main/groovy/testsocket/AWebSocketHandler.groovy) Is the new spring boot method
 ```groovy
 
 package testsocket
@@ -237,7 +237,7 @@ public class AWebSocketHandler implements WebSocketHandler {
 ```
 
 
-This is called by index.gsp:
+This is called by [index.gsp](https://github.com/vahidhedayati/testwebsocket-grails3/blob/master/grails-app/views/index.gsp):
 
 Although sockjs was implemented initially as you can see I reverted this back to use new WebSocket  - so no extra requirements:
 ```gsp

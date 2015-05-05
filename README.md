@@ -285,6 +285,13 @@ socket.onerror = function() {
 
 
 
+## Issues raised + bound to this project:
+
+http://stackoverflow.com/questions/28902928/grails-grails3-dowithwebdescriptor/
+
+https://groups.google.com/forum/#!topic/grails-dev-discuss/yeG_9Gi9K5M
+
+
 
 ### Resources found to help put all of this together:
 

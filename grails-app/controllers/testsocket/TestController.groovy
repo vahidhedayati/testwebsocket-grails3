@@ -8,4 +8,9 @@ class TestController {
     def index() {
             render view: 'index'
     }
+
+    def index2() {
+        render view: 'index2'
+    }
+
 }

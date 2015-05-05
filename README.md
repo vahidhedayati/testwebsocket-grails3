@@ -305,6 +305,8 @@ https://github.com/hsilomedus/web-sockets-samples
 
 https://github.com/shangmin1990/websocket
 
+http://stackoverflow.com/questions/25375152/how-to-call-the-websocket-server-to-sends-the-message-to-the-client-in-spring
+
 
 http://translate.google.co.uk/translate?hl=en&sl=de&u=https://blog.rasc.ch/%3Fp%3D2574&prev=search
 

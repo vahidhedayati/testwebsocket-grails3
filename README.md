@@ -299,7 +299,17 @@ https://github.com/hsilomedus/web-sockets-samples
 https://github.com/shangmin1990/websocket
 
 
+http://translate.google.co.uk/translate?hl=en&sl=de&u=https://blog.rasc.ch/%3Fp%3D2574&prev=search
 
+https://rmannibucau.wordpress.com/2014/09/23/tomee-embedded-a-spring-boot-air-without-no-ee-features-for-business-code/
+
+
+https://github.com/spring-projects/spring-boot/issues/2070
+
+http://stackoverflow.com/questions/22544214/spring-boot-and-jsf-primefaces-richfaces
+
+
+http://stackoverflow.com/questions/24955534/spring-3-5-how-to-add-httpsessioneventpublisher-to-my-boot-configuration
 
 
 

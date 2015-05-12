@@ -74,7 +74,7 @@ class Application extends GrailsAutoConfiguration implements  WebSocketConfigure
 
 Besides your application.groovy, if you are building a plugin you could do something like this:
 
-In you plugin descriptor you have something like this:
+In you [https://github.com/vahidhedayati/grails-wschat-plugin/blob/master/src/main/groovy/wschat/WschatGrailsPlugin.groovy)(plugin descriptor) you have something like this:
 ```groovy
 Closure doWithSpring() {
         {->
@@ -82,7 +82,7 @@ Closure doWithSpring() {
         }
     }
 ```    
-In this plugin I have left both methods of initiating the listener:, this is your DefaultWsChatConfig.groovy inside the same folder as your plugin descriptor (refer to grails-wschat-plugin)
+In this plugin I have left both methods of initiating the listener:, this is your [DefaultWsChatConfig.groovy](https://github.com/vahidhedayati/grails-wschat-plugin/blob/master/src/main/groovy/wschat/DefaultWsChatConfig.groovy) inside the same folder as your plugin descriptor (refer to grails-wschat-plugin)
 
 ```groovy
 @Bean

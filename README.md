@@ -74,7 +74,7 @@ class Application extends GrailsAutoConfiguration implements  WebSocketConfigure
 
 Besides your application.groovy, if you are building a plugin you could do something like this:
 
-In you [plugin descriptor](https://github.com/vahidhedayati/grails-wschat-plugin/blob/master/src/main/groovy/wschat/WschatGrailsPlugin.groovy] you have something like this:
+In you [plugin descriptor](https://github.com/vahidhedayati/grails-wschat-plugin/blob/master/src/main/groovy/wschat/WschatGrailsPlugin.groovy) you have something like this:
 ```groovy
 Closure doWithSpring() {
         {->

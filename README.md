@@ -72,6 +72,42 @@ class Application extends GrailsAutoConfiguration implements  WebSocketConfigure
 ```
 
 
+Besides your application.groovy, if you are building a plugin you could do something like this:
+
+In you plugin descriptor you have something like this:
+```groovy
+Closure doWithSpring() {
+        {->
+            wsChatConfig DefaultWsChatConfig
+        }
+    }
+```    
+In this plugin I have left both methods of initiating the listener:, this is your DefaultWsChatConfig.groovy inside the same folder as your plugin descriptor (refer to grails-wschat-plugin)
+
+```groovy
+@Bean
+    public ServletContextInitializer myInitializer() {
+        return new ServletContextInitializer() {
+            @Override
+            public void onStartup(ServletContext servletContext) throws ServletException {
+                servletContext.addListener(WsCamEndpoint)
+                servletContext.addListener(WsChatFileEndpoint)
+
+            }
+        }
+    }
+
+    // Alternative way
+    //@Bean
+    //public ServletListenerRegistrationBean<WsChatEndpoint>  httpSessionEventPublisher() {
+     //   return new ServletListenerRegistrationBean<WsChatEndpoint>(new WsChatEndpoint())
+    //}
+```
+
+In this example I am registering the listeners using the top ServletContextInitializer, since as you can see the limitation of the latter method is that only 1 listener can be registered in either your application.groovy or your CustomConfig.groovy defined in your plugin. The top method allows you to interact with servletContext directly and thus ability to register multiple listeners or any other required task.
+
+With this in place, spring boot now emulates the same as web.xml would when registering a listener. The actual groovy classes that load the websockets from there are as they were i.e. using default websocket calls such as onOpen onMessage etc..
+
 
 [AnotherWebSocketHandler.groovy](https://github.com/vahidhedayati/testwebsocket-grails3/blob/master/src/main/groovy/testsocket/AnotherWebSocketHandler.groovy) this is our traditional calling method to use default websockets via a spring boot Grails application
 
